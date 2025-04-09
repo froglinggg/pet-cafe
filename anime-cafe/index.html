@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Мой питомец</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Панель потребностей (над игровым окном) -->
+  <div class="stats-panel">
+    <div class="stat">
+      <span class="stat-name">Сытость:</span>
+      <span class="stat-value" id="hunger-value">50</span>/100
+      <div class="bar"><div class="hunger-bar"></div></div>
+    </div>
+    <div class="stat">
+      <span class="stat-name">Настроение:</span>
+      <span class="stat-value" id="mood-value">50</span>/100
+      <div class="bar"><div class="mood-bar"></div></div>
+    </div>
+    <div class="stat">
+      <span class="stat-name">Энергия:</span>
+      <span class="stat-value" id="energy-value">50</span>/100
+      <div class="bar"><div class="energy-bar"></div></div>
+    </div>
+  </div>
+
+  <!-- Окно с питомцем -->
+  <div class="game-container">
+    <h1 class="title">Мой питомец</h1>
+    <div class="character-container">
+      <img src="images/character_happy.png" id="character-img" class="character">
+    </div>
+    <div class="actions">
+      <button onclick="feed()">🍔 Кормить</button>
+      <button onclick="pet()">🐾 Гладить</button>
+      <button onclick="play()">🎮 Играть</button>
+    </div>
+    <div class="message" id="message"></div>
+  </div>
+  <script src="script.js"></script>
+
+<audio id="meow-sound" src="sounds/meow.mp3"></audio>
+<audio id="eat-sound" src="sounds/eat.mp3"></audio>
+<audio id="play-sound" src="sounds/play.mp3"></audio>
+</body>
+</html>
